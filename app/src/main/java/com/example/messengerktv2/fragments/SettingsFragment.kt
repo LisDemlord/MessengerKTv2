@@ -30,6 +30,9 @@ class SettingsFragment : BaseFragment(R.layout.fragment_settings) {
             settingsBtnChangeNumberPhone.setOnClickListener {
                 replaceFragment(ChangeNumberPhoneFragment())
             }
+            settingsBtnChangeUsername.setOnClickListener {
+                replaceFragment(ChangeUsernameFragment())
+            }
         }
     }
 
