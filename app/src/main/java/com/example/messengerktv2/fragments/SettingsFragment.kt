@@ -13,25 +13,23 @@ import com.example.messengerktv2.LoginActivity
 import com.example.messengerktv2.R
 import com.example.messengerktv2.databinding.FragmentSettingsBinding
 import com.example.messengerktv2.utilities.DataSaveHelper
+import com.example.messengerktv2.utilities.replaceFragment
 
 class SettingsFragment : BaseFragment(R.layout.fragment_settings) {
     private val binding by viewBinding(FragmentSettingsBinding::bind)
-    private val loginData: DataSaveHelper by activityViewModels()
+    private val dataBase: DataSaveHelper by activityViewModels()
 
     override fun onResume() {
         super.onResume()
         setHasOptionsMenu(true)
 
         with(binding) {
+            settingsFullName.text = dataBase.login.value
+            settingsPhoneNumber.text = dataBase.numberPhone.value
+            settingsUsername.text = dataBase.userName.value
             settingsBtnChangeNumberPhone.setOnClickListener {
-
+                replaceFragment(ChangeNumberPhoneFragment())
             }
-        }
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        loginData.login.observe(activity as LifecycleOwner) {
-            binding.settingsFullName.text = it
         }
     }
 

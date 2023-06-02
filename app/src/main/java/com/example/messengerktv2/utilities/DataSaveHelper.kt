@@ -13,6 +13,10 @@ open class DataSaveHelper : ViewModel() {
     }
 
     val numberPhone: MutableLiveData<String> by lazy {
-        MutableLiveData<String>()
+        MutableLiveData<String>("")
+    }
+
+    val userName: MutableLiveData<String> by lazy {
+        MutableLiveData<String>("")
     }
 }
