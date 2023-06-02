@@ -29,6 +29,7 @@ class ChatsFragment : Fragment(R.layout.fragment_chats) {
 
     override fun onStart() {
         super.onStart()
+
         binding.chatTextView.text = dataBase.historyMessage.value
         binding.chatTextScroll.fullScroll(View.FOCUS_DOWN)
 

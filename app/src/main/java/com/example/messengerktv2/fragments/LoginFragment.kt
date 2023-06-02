@@ -14,7 +14,6 @@ import com.example.messengerktv2.utilities.showToast
 
 class LoginFragment : Fragment(R.layout.fragment_login) {
     private val binding by viewBinding(FragmentLoginBinding::bind)
-    private val dataBase: DataSaveHelper by activityViewModels()
 
     override fun onStart() {
         super.onStart()
@@ -25,8 +24,9 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
         if (binding.registerInputCode.text.toString().isEmpty()) {
             showToast("Заполните поле")
         } else {
-            dataBase.login.value = binding.registerInputCode.text.toString()
+
             val intent = Intent (activity, MainActivity::class.java)
+            intent.putExtra("login", binding.registerInputCode.text)
             activity?.startActivity(intent)
         }
     }
