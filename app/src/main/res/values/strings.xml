@@ -20,4 +20,6 @@
     <string name="register_hint_default_code">- - - - - -</string>
     <string name="register_title_your_phone">Имя пользователя</string>
     <string name="register_toast_enter_phone">Введите номер телефона</string>
+    <string name="change_number_phone_text">Введите номер телефона</string>
+    <string name="change_number_phone_text2">Данный номер будет отображаться профиле</string>
 </resources>

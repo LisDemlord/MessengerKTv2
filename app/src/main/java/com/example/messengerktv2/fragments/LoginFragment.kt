@@ -1,8 +1,10 @@
 package com.example.messengerktv2.fragments
 
+import android.content.Intent
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import by.kirich1409.viewbindingdelegate.viewBinding
+import com.example.messengerktv2.MainActivity
 import com.example.messengerktv2.R
 import com.example.messengerktv2.databinding.FragmentLoginBinding
 import com.example.messengerktv2.fragments.ChatsFragment
@@ -24,7 +26,8 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
             showToast("Заполните поле")
         } else {
             dataBase.login.value = binding.registerInputCode.text.toString()
-            replaceFragment(ChatsFragment())
+            val intent = Intent (activity, MainActivity::class.java)
+            activity?.startActivity(intent)
         }
     }
 }

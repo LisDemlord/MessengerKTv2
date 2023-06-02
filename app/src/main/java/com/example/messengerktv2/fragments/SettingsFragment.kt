@@ -1,5 +1,6 @@
 package com.example.messengerktv2.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
@@ -8,11 +9,10 @@ import android.view.View
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.LifecycleOwner
 import by.kirich1409.viewbindingdelegate.viewBinding
-import com.example.messengerktv2.LoginFragment
+import com.example.messengerktv2.LoginActivity
 import com.example.messengerktv2.R
 import com.example.messengerktv2.databinding.FragmentSettingsBinding
 import com.example.messengerktv2.utilities.DataSaveHelper
-import com.example.messengerktv2.utilities.replaceFragment
 
 class SettingsFragment : BaseFragment(R.layout.fragment_settings) {
     private val binding by viewBinding(FragmentSettingsBinding::bind)
@@ -21,6 +21,12 @@ class SettingsFragment : BaseFragment(R.layout.fragment_settings) {
     override fun onResume() {
         super.onResume()
         setHasOptionsMenu(true)
+
+        with(binding) {
+            settingsBtnChangeNumberPhone.setOnClickListener {
+
+            }
+        }
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -36,7 +42,8 @@ class SettingsFragment : BaseFragment(R.layout.fragment_settings) {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.settings_menu_exit -> {
-                replaceFragment(LoginFragment())
+                val intent = Intent(activity, LoginActivity::class.java)
+                activity?.startActivity(intent)
             }
         }
         return true

@@ -11,4 +11,8 @@ open class DataSaveHelper : ViewModel() {
     val historyMessage: MutableLiveData<String> by lazy {
         MutableLiveData<String>("")
     }
+
+    val numberPhone: MutableLiveData<String> by lazy {
+        MutableLiveData<String>()
+    }
 }

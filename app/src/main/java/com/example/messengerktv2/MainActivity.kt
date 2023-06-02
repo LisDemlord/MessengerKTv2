@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import com.example.messengerktv2.databinding.ActivityMainBinding
-import com.example.messengerktv2.fragments.LoginFragment
+import com.example.messengerktv2.fragments.ChatsFragment
 import com.example.messengerktv2.`object`.AppDrawer
 import com.example.messengerktv2.utilities.replaceFragment
 
@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
     private fun initFunc() {
         setSupportActionBar(mToolbar)
         mAppDrawer.create()
-        replaceFragment(LoginFragment(), false)
+        replaceFragment(ChatsFragment(), false)
     }
 
     private fun initFields() {
