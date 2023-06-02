@@ -20,7 +20,6 @@ import java.net.Socket
 class ChatsFragment : Fragment(R.layout.fragment_chats) {
     private val binding by viewBinding(FragmentChatsBinding::bind)
     private val dataBase: DataSaveHelper by activityViewModels()
-    private lateinit var fullMessage: String
 
     private val SERVER_IP = "192.168.0.3"
     private val SERVER_PORT = 8080

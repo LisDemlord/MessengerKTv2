@@ -1,10 +1,9 @@
 package com.example.messengerktv2
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import com.example.messengerktv2.databinding.ActivityMainBinding
-import com.example.messengerktv2.fragments.LoginFragment
 import com.example.messengerktv2.`object`.AppDrawer
 import com.example.messengerktv2.utilities.replaceFragment
 

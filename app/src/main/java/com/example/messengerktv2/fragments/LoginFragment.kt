@@ -1,10 +1,10 @@
-package com.example.messengerktv2.fragments
+package com.example.messengerktv2
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import by.kirich1409.viewbindingdelegate.viewBinding
-import com.example.messengerktv2.R
 import com.example.messengerktv2.databinding.FragmentLoginBinding
+import com.example.messengerktv2.fragments.ChatsFragment
 import com.example.messengerktv2.utilities.DataSaveHelper
 import com.example.messengerktv2.utilities.replaceFragment
 import com.example.messengerktv2.utilities.showToast
